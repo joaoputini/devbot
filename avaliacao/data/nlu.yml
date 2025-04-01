@@ -1,0 +1,80 @@
+version: "3.1"
+nlu:
+  - intent: cumprimentar
+    examples: |
+      - Oi
+      - Olá
+      - E aí
+      - Tudo bem?
+      - Como vai?
+
+  - intent: agradecer
+    examples: |
+      - Obrigado
+      - Muito obrigado
+      - Valeu
+      - Agradeço muito
+      - Foi de grande ajuda
+
+  - intent: relatar_problema_acesso
+    examples: |
+      - Não consigo acessar minha conta
+      - Está dando erro ao tentar entrar na minha conta
+      - Não consigo fazer login
+      - Quando tento acessar, aparece uma mensagem de erro
+      - Minha conta não abre, você pode me ajudar?
+
+  - intent: relatar_problema_plano
+    examples: |
+      - Eu quero mudar meu plano
+      - Gostaria de alterar meu plano de assinatura
+      - Quero saber mais sobre outros planos
+      - Como posso mudar o meu plano atual?
+      - Me fale mais sobre o plano Premium
+
+  - intent: relatar_problema_tecnico
+    examples: |
+      - A plataforma está com problemas
+      - Não estou conseguindo usar a plataforma
+      - A plataforma está travando
+      - Está acontecendo um erro técnico
+      - O sistema não está funcionando direito
+
+  - intent: pedir_ajuda
+    examples: |
+      - Preciso de ajuda com minha conta
+      - Não sei o que fazer, você pode me ajudar?
+      - Como faço para resolver meu problema?
+      - Não estou conseguindo acessar meu plano, me ajuda
+      - Não sei como mudar meu plano, pode me ajudar?
+
+  - intent: fornecer_informacoes_plano
+    examples: |
+      - Quais são os planos disponíveis?
+      - Me fale mais sobre o plano Básico
+      - Quero saber as vantagens do plano Família
+      - O que inclui o plano Premium?
+      - Como funciona o plano Premium?
+
+  - intent: encaminhar_atendente
+    examples: |
+      - Preciso falar com um atendente humano
+      - Não consegui resolver meu problema, pode me passar para um atendente?
+      - A minha dúvida é mais complexa, preciso de ajuda de um humano
+      - Isso está fora do meu alcance, preciso de um atendente
+      - Me passe para alguém que possa me ajudar melhor
+
+  - intent: despedir
+    examples: |
+      - Tchau
+      - Até logo
+      - Adeus
+      - Fui
+      - Até mais
+
+  - intent: relatar_problema_acesso
+    examples: |
+      - Não consigo acessar minha conta
+      - Está dando erro ao tentar entrar na minha conta
+      - Minha conta não abre
+      - Quando tento acessar, aparece uma mensagem de erro

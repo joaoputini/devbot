@@ -1,0 +1,61 @@
+version: "3.1"
+intents:
+  - relatar_problema_acesso
+  - relatar_problema_plano
+  - relatar_problema_tecnico
+  - pedir_ajuda
+  - fornecer_informacoes_plano
+  - encaminhar_atendente
+  - agradecer
+  - despedir
+  - cumprimentar
+
+entities:
+  - problema
+  - plano
+  - tipo_problema
+  - erro
+
+slots:
+  problema:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: problema
+  plano:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: plano
+  erro:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: erro
+
+responses:
+  utter_cumprimentar:
+    - text: "Oi, tudo bem? Como posso te ajudar hoje com a sua conta da Som na Nuvem?"
+  utter_relatar_problema_acesso:
+    - text: "Ah, entendi você está com problemas de acesso à sua conta. Pode me contar um pouquinho mais sobre o que está acontecendo? Qual erro você está vendo?"
+  utter_relatar_problema_plano:
+    - text: "Ah, você quer mudar de plano? Conta pra mim qual plano você está agora e o que você tem em mente?"
+  utter_relatar_problema_tecnico:
+    - text: "Poxa, que chato que você está enfrentando problemas técnicos. O que exatamente está acontecendo? Vou te ajudar a resolver isso!"
+  utter_pedir_ajuda:
+    - text: "Claro! O que está pegando? Me conta estou aqui para te ajudar com o que você precisar!"
+  utter_fornecer_informacoes_plano:
+    - text: "Aqui estão os planos disponíveis: Básico Premium e Família. Se você quiser, posso te ajudar a escolher o que mais combina com você!"
+  utter_encaminhar_atendente:
+    - text: "Parece que o seu problema é um pouco mais complexo do que eu posso resolver aqui. Vou te passar para um atendente humano, ele vai dar um help com tudo!"
+  utter_agredecir:
+    - text: "Imagina, é para isso que estou aqui! Qualquer coisa, é só chamar. Espero que tenha resolvido seu problema!"
+  utter_despedir:
+    - text: "Foi um prazer te ajudar! Se precisar de mais alguma coisa, é só me chamar. Até logo!"
+
+actions:
+  - action_fornecer_suporte
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

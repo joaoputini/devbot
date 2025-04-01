@@ -1,0 +1,84 @@
+version: "3.1"
+stories:
+  - story: fluxo_feliz
+    steps:
+      - intent: cumprimentar
+      - intent: relatar_problema_acesso
+      - action: action_fornecer_suporte
+      - intent: agradecer
+      - action: utter_agredecir
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: fluxo_problema_plano
+    steps:
+      - intent: cumprimentar
+      - intent: relatar_problema_plano
+      - action: action_fornecer_suporte
+      - intent: agradecer
+      - action: utter_agredecir
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: fluxo_problema_tecnico
+    steps:
+      - intent: cumprimentar
+      - intent: relatar_problema_tecnico
+      - action: action_fornecer_suporte
+      - intent: agradecer
+      - action: utter_agredecir
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: fluxo_encaminhar_atendente
+    steps:
+      - intent: cumprimentar
+      - intent: relatar_problema_acesso
+      - action: action_fornecer_suporte
+      - intent: encaminhar_atendente
+      - action: utter_encaminhar_atendente
+      - intent: agradecer
+      - action: utter_agredecir
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: fluxo_negacao
+    steps:
+      - intent: cumprimentar
+      - action: utter_cumprimentar
+      - intent: relatar_problema_acesso
+      - intent: action_fornecer_suporte
+      - intent: negar
+      - action: utter_negar
+      - intent: relatar_problema_plano
+      - action: action_fornecer_suporte
+      - intent: agradecer
+      - action: utter_agredecir
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: fluxo_pedir_ajuda
+    steps:
+      - intent: cumprimentar
+      - action: utter_cumprimentar
+      - intent: pedir_ajuda
+      - action: utter_ajuda
+      - intent: relatar_problema_acesso
+      - action: action_fornecer_suporte
+      - intent: agradecer
+      - action: utter_agredecir
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: fluxo_encaminhar_outra_duvida
+    steps:
+      - intent: cumprimentar
+      - action: utter_cumprimentar
+      - intent: relatar_problema_acesso
+      - action: action_fornecer_suporte
+      - intent: outra_duvida
+      - action: utter_encaminhar_atendente
+      - intent: agradecer
+      - action: utter_agredecir
+      - intent: despedir
+      - action: utter_despedir
